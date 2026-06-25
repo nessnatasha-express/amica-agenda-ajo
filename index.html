@@ -296,21 +296,18 @@
         <div style="overflow-x:auto; margin-top:8px;">
           <table class="uc-table">
             <colgroup>
-              <col /><col /><col /><col />
+              <col style="width:35%"/><col style="width:30%"/><col style="width:35%"/>
             </colgroup>
             <thead>
               <tr>
-                <th>Use Case</th>
                 <th>Capability</th>
-                <th>What It Enables</th>
-                <th>Unlocks</th>
+                <th>Unlocks AJO Features</th>
+                <th>Value to Amica</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Request a Quote</strong><br><span class="uc-badge uc-today" style="margin-top:5px; display:inline-block;">Covering today</span></td>
-                <td>Event-driven triggered journey for prospects and existing customers who completed a quote — auto, home, and life as separate variants</td>
-                <td>Drive higher quote-to-bind conversions via a 21–30 day nurture cadence at peak intent</td>
+                <td><strong>Quote to Policy Bind</strong><br><span class="uc-badge uc-today" style="margin-top:5px; display:inline-block;">Covering today</span><br><span style="display:block; margin-top:6px; font-weight:400;">Event-driven triggered journey for prospects and existing customers who completed a quote — auto, home, and life as separate variants</span></td>
                 <td>
                   <span class="uc-badge uc-journey">Journey</span>
                   <span class="uc-badge uc-tmpl">Templates</span>
@@ -320,11 +317,10 @@
                   <span class="uc-badge uc-ch">Email</span>
                   <span class="uc-badge uc-ch">SMS</span>
                 </td>
+                <td>Drive higher quote-to-bind conversions via a 21–30 day nurture cadence at peak intent</td>
               </tr>
               <tr>
-                <td><strong>Cross-Sell</strong></td>
-                <td>Drip nurture for active single-line policyholders targeting home, auto, or life expansion based on existing policy state</td>
-                <td>Increase policies per customer and reduce churn risk through timely cross-line outreach</td>
+                <td><strong>Cross-Sell &amp; Bundle Conversion</strong><br><span style="display:block; margin-top:6px; font-weight:400;">Drip nurture for active single-line policyholders targeting home, auto, or life expansion based on existing policy state</span></td>
                 <td>
                   <span class="uc-badge uc-journey">Journey</span>
                   <span class="uc-badge uc-tmpl">Templates</span>
@@ -333,11 +329,10 @@
                   <span class="uc-badge uc-ch">Email</span>
                   <span class="uc-badge uc-ch">SMS</span>
                 </td>
+                <td>Increase policies per customer and reduce churn risk through timely cross-line outreach</td>
               </tr>
               <tr>
-                <td><strong>Quote Abandon</strong></td>
-                <td>Triggered recovery journey for high-intent visitors who started but did not submit a formal quote within 24 hours</td>
-                <td>Recover near-converts before intent goes cold with a short, high-frequency cadence</td>
+                <td><strong>Incomplete Quote Request</strong><br><span style="display:block; margin-top:6px; font-weight:400;">Triggered recovery journey for high-intent visitors who started but did not submit a formal quote within 24 hours</span></td>
                 <td>
                   <span class="uc-badge uc-journey">Journey</span>
                   <span class="uc-badge uc-event">Event Trigger</span>
@@ -346,11 +341,10 @@
                   <span class="uc-badge uc-ch">Email</span>
                   <span class="uc-badge uc-ch">SMS</span>
                 </td>
+                <td>Recover near-converts before intent goes cold with a short, high-frequency cadence</td>
               </tr>
               <tr>
-                <td><strong>Site Abandon</strong></td>
-                <td>Real-time triggered journey for known visitors who browsed but did not start or complete a quote</td>
-                <td>No visitors left behind — redirect via email and paid media to re-enter the quote funnel</td>
+                <td><strong>Site Abandon &amp; Retargeting</strong><br><span style="display:block; margin-top:6px; font-weight:400;">Real-time triggered journey for known visitors who browsed but did not start or complete a quote</span></td>
                 <td>
                   <span class="uc-badge uc-journey">Journey</span>
                   <span class="uc-badge uc-event">Event Trigger</span>
@@ -358,39 +352,37 @@
                   <span class="uc-badge uc-ch">Email</span>
                   <span class="uc-badge uc-ch">Paid Media</span>
                 </td>
+                <td>No visitors left behind — redirect via email and paid media to re-enter the quote funnel</td>
               </tr>
               <tr>
-                <td><strong>Core Suppressions</strong></td>
-                <td>Cross-channel suppression logic applied globally: paid media hold (72h post-click), SMS opt-out pool, in-quote queue, and do-not-contact list</td>
-                <td>Frequency governance and compliance at scale — protects sender reputation across all journeys</td>
+                <td><strong>Core Suppressions</strong><br><span style="display:block; margin-top:6px; font-weight:400;">Cross-channel suppression logic applied globally: paid media hold (72h post-click), SMS opt-out pool, in-quote queue, and do-not-contact list</span></td>
                 <td>
                   <span class="uc-badge uc-platform">Platform</span>
                   <span class="uc-badge uc-seg">Audience Rules</span>
                   <span class="uc-badge uc-cap">Freq. Capping</span>
                   <span class="uc-badge uc-cap">TCPA</span>
                 </td>
+                <td>Frequency governance and compliance at scale — protects sender reputation across all journeys</td>
               </tr>
               <tr>
-                <td><strong>Identity Resolution</strong></td>
-                <td>ECID-based identity stitching in AEP linking anonymous site behavior to known profiles across devices and sessions</td>
-                <td>Enables accurate segmentation, suppression, and personalization from the first touchpoint</td>
+                <td><strong>Identity Resolution</strong><br><span style="display:block; margin-top:6px; font-weight:400;">ECID-based identity stitching in AEP linking anonymous site behavior to known profiles across devices and sessions</span></td>
                 <td>
                   <span class="uc-badge uc-platform">Platform</span>
                   <span class="uc-badge uc-data">AEP Schema</span>
                   <span class="uc-badge uc-data">Datastream</span>
                   <span class="uc-badge uc-data">ECID</span>
                 </td>
+                <td>Enables accurate segmentation, suppression, and personalization from the first touchpoint</td>
               </tr>
               <tr>
-                <td><strong>Event-Based Triggers</strong></td>
-                <td>Streaming XDM event schema triggering journeys in real time based on behavioral signals from the Amica quote engine datastream</td>
-                <td>Moment-in-time engagement — reach customers at peak intent, not on a batch schedule</td>
+                <td><strong>Event-Based Triggers</strong><br><span style="display:block; margin-top:6px; font-weight:400;">Streaming XDM event schema triggering journeys in real time based on behavioral signals from the Amica quote engine datastream</span></td>
                 <td>
                   <span class="uc-badge uc-platform">Platform</span>
                   <span class="uc-badge uc-event">Event Trigger</span>
                   <span class="uc-badge uc-data">XDM Schema</span>
                   <span class="uc-badge uc-data">Streaming Seg.</span>
                 </td>
+                <td>Moment-in-time engagement — reach customers at peak intent, not on a batch schedule</td>
               </tr>
             </tbody>
           </table>
@@ -404,13 +396,13 @@
         <div class="num num-teal">2</div>
         <div class="item-body">
           <div class="item-title">Demo Scope &amp; Approach</div>
-          <div class="item-desc">Focused on the "Request a Quote" triggered journey — converting prospects and existing customers who completed a quote into a bound policy</div>
+          <div class="item-desc">Focused on the "Quote to Policy Bind" — converting prospects and existing customers who requested a quote into a bound policy</div>
         </div>
         <div class="item-time">~5 min</div>
       </div>
 
       <div class="journey-panel">
-        <div class="journey-panel-header">Journey: Request a Quote — Prospect &amp; Customer</div>
+        <div class="journey-panel-header">Journey: Quote to Policy Bind — Prospect &amp; Customer</div>
         <div class="journey-panel-body">
           <div class="jp-row">
             <div class="jp-label">Objective</div>
@@ -457,7 +449,7 @@
       </div>
 
       <div class="sub-section" style="margin-top:16px; padding-bottom:4px;">
-        <div class="sub-section-label">Nurture Cadence</div>
+        <div class="sub-section-label">Cadence</div>
       </div>
 
       <div class="cadence-wrap">
