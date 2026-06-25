@@ -128,14 +128,65 @@
     color: #0A6B50;
     letter-spacing: 0.2px;
   }
-  .journey-panel-body { padding: 14px 16px; }
+  .journey-panel-body { padding: 14px 16px; font-size: 11px; }
 
   .jp-row { display: grid; grid-template-columns: 130px 1fr; gap: 8px; margin-bottom: 10px; align-items: start; }
-  .jp-label { font-size: 11px; font-weight: 600; color: #888880; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 2px; }
-  .jp-val { font-size: 13px; color: #333330; line-height: 1.5; }
+  .jp-label { font-size: 9px; font-weight: 600; color: #888880; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 2px; }
+  .jp-val { font-size: 11px; color: #333330; line-height: 1.5; }
   .jp-val em { font-style: normal; color: #0A6B50; font-weight: 500; }
   .jp-bullets { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; }
-  .jp-bullets li { font-size: 13px; color: #333330; line-height: 1.5; }
+  .jp-bullets li { font-size: 11px; color: #333330; line-height: 1.5; }
+
+  /* USE CASE TABLE */
+  table.uc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    table-layout: fixed;
+  }
+  table.uc-table colgroup col:nth-child(1) { width: 14%; }
+  table.uc-table colgroup col:nth-child(2) { width: 36%; }
+  table.uc-table colgroup col:nth-child(3) { width: 26%; }
+  table.uc-table colgroup col:nth-child(4) { width: 24%; }
+  table.uc-table thead tr th {
+    background: #F2F2EE;
+    font-size: 9px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: #6A6A62;
+    padding: 9px 12px;
+    text-align: left;
+    border-bottom: 1px solid #E0E0DA;
+  }
+  table.uc-table tbody tr td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #F0F0EA;
+    color: #333330;
+    vertical-align: top;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  table.uc-table tbody tr:last-child td { border-bottom: none; }
+  table.uc-table tbody tr:nth-child(even) td { background: #FAFAF8; }
+  .uc-badge {
+    display: inline-block;
+    font-size: 10px; font-weight: 500;
+    padding: 2px 8px; border-radius: 10px;
+    white-space: nowrap;
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+  .uc-journey { background: #E1F5EE; color: #0A6B50; }
+  .uc-platform { background: #EAF0FB; color: #1A4FA0; }
+  .uc-today { background: #FFF3E0; color: #AA5500; border: 1px solid #F5DDB0; }
+  .uc-tmpl { background: #F0EBF9; color: #6A1AAA; }
+  .uc-frag { background: #FFF3E0; color: #8B5500; }
+  .uc-pers { background: #E8F4F8; color: #0A5F7A; }
+  .uc-report { background: #F2F2EE; color: #5A5A52; }
+  .uc-ch { background: #F7F0FB; color: #7A2AAA; }
+  .uc-seg { background: #EAF5FB; color: #0A5A8B; }
+  .uc-event { background: #FEF9E7; color: #8B6914; }
+  .uc-cap { background: #FDECEA; color: #8B1A1A; }
+  .uc-data { background: #E8F8F5; color: #0A6B55; }
 
   /* CADENCE TABLE */
   .cadence-wrap { margin: 0 20px 20px 64px; overflow-x: auto; }
@@ -236,18 +287,113 @@
       <div class="item-header">
         <div class="num num-teal">1</div>
         <div class="item-body">
-          <div class="item-title">Use Cases in Scope</div>
-          <div class="item-desc">Align on the 3–5 journeys we are building toward — confirm scope and priority order</div>
+          <div class="item-title">Setting the Stage</div>
+          <div class="item-desc">This implementation is scoped to deliver 3–5 use cases in AJO — each a core capability built to scale across channels, customer states, and business priorities. The goal is not a point deployment or a vanilla lift-and-shift from SFMC, but a set of highly scalable, intelligent foundational elements Amica can continue to build on. <strong>Here are some examples below, however the team will further align with you on prioritized capabilities in the sessions to come.</strong></div>
         </div>
         <div class="item-time">~5 min</div>
       </div>
-      <div class="sub-section">
-        <div class="sub-rows">
-          <div class="sub-row"><div class="dot"></div><div class="sub-text"><strong>Request a Quote</strong> — Prospect &amp; existing customers requesting a new quote (combined journey)</div></div>
-          <div class="sub-row"><div class="dot"></div><div class="sub-text"><strong>Customer: Cross-Sell</strong> — Active policyholder interested in an additional line (home, auto, or life)</div></div>
-          <div class="sub-row"><div class="dot"></div><div class="sub-text"><strong>Quote Started, Not Completed</strong> — Prospect or customer who started but did not submit a formal quote within 24 hours</div></div>
-          <div class="sub-row"><div class="dot"></div><div class="sub-text"><strong>Retargeting / Site Abandoned</strong> — Known site visitor who did not start or complete a quote; redirect via email and media</div></div>
-          <div class="sub-row"><div class="dot"></div><div class="sub-text"><strong>Core Suppressions</strong> — Paid media retargeting audiences, SMS opt-out pool, in-quote queue holds, global do-not-contact</div></div>
+      <div class="sub-section" style="padding-left:20px; padding-right:20px;">
+        <div style="overflow-x:auto; margin-top:8px;">
+          <table class="uc-table">
+            <colgroup>
+              <col /><col /><col /><col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Use Case</th>
+                <th>Capability</th>
+                <th>What It Enables</th>
+                <th>Unlocks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Request a Quote</strong><br><span class="uc-badge uc-today" style="margin-top:5px; display:inline-block;">Covering today</span></td>
+                <td>Event-driven triggered journey for prospects and existing customers who completed a quote — auto, home, and life as separate variants</td>
+                <td>Drive higher quote-to-bind conversions via a 21–30 day nurture cadence at peak intent</td>
+                <td>
+                  <span class="uc-badge uc-journey">Journey</span>
+                  <span class="uc-badge uc-tmpl">Templates</span>
+                  <span class="uc-badge uc-frag">Fragments</span>
+                  <span class="uc-badge uc-pers">Personalization</span>
+                  <span class="uc-badge uc-report">Reporting</span>
+                  <span class="uc-badge uc-ch">Email</span>
+                  <span class="uc-badge uc-ch">SMS</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Cross-Sell</strong></td>
+                <td>Drip nurture for active single-line policyholders targeting home, auto, or life expansion based on existing policy state</td>
+                <td>Increase policies per customer and reduce churn risk through timely cross-line outreach</td>
+                <td>
+                  <span class="uc-badge uc-journey">Journey</span>
+                  <span class="uc-badge uc-tmpl">Templates</span>
+                  <span class="uc-badge uc-seg">Segmentation</span>
+                  <span class="uc-badge uc-report">Reporting</span>
+                  <span class="uc-badge uc-ch">Email</span>
+                  <span class="uc-badge uc-ch">SMS</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Quote Abandon</strong></td>
+                <td>Triggered recovery journey for high-intent visitors who started but did not submit a formal quote within 24 hours</td>
+                <td>Recover near-converts before intent goes cold with a short, high-frequency cadence</td>
+                <td>
+                  <span class="uc-badge uc-journey">Journey</span>
+                  <span class="uc-badge uc-event">Event Trigger</span>
+                  <span class="uc-badge uc-frag">Fragments</span>
+                  <span class="uc-badge uc-report">Reporting</span>
+                  <span class="uc-badge uc-ch">Email</span>
+                  <span class="uc-badge uc-ch">SMS</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Site Abandon</strong></td>
+                <td>Real-time triggered journey for known visitors who browsed but did not start or complete a quote</td>
+                <td>No visitors left behind — redirect via email and paid media to re-enter the quote funnel</td>
+                <td>
+                  <span class="uc-badge uc-journey">Journey</span>
+                  <span class="uc-badge uc-event">Event Trigger</span>
+                  <span class="uc-badge uc-seg">Segmentation</span>
+                  <span class="uc-badge uc-ch">Email</span>
+                  <span class="uc-badge uc-ch">Paid Media</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Core Suppressions</strong></td>
+                <td>Cross-channel suppression logic applied globally: paid media hold (72h post-click), SMS opt-out pool, in-quote queue, and do-not-contact list</td>
+                <td>Frequency governance and compliance at scale — protects sender reputation across all journeys</td>
+                <td>
+                  <span class="uc-badge uc-platform">Platform</span>
+                  <span class="uc-badge uc-seg">Audience Rules</span>
+                  <span class="uc-badge uc-cap">Freq. Capping</span>
+                  <span class="uc-badge uc-cap">TCPA</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Identity Resolution</strong></td>
+                <td>ECID-based identity stitching in AEP linking anonymous site behavior to known profiles across devices and sessions</td>
+                <td>Enables accurate segmentation, suppression, and personalization from the first touchpoint</td>
+                <td>
+                  <span class="uc-badge uc-platform">Platform</span>
+                  <span class="uc-badge uc-data">AEP Schema</span>
+                  <span class="uc-badge uc-data">Datastream</span>
+                  <span class="uc-badge uc-data">ECID</span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Event-Based Triggers</strong></td>
+                <td>Streaming XDM event schema triggering journeys in real time based on behavioral signals from the Amica quote engine datastream</td>
+                <td>Moment-in-time engagement — reach customers at peak intent, not on a batch schedule</td>
+                <td>
+                  <span class="uc-badge uc-platform">Platform</span>
+                  <span class="uc-badge uc-event">Event Trigger</span>
+                  <span class="uc-badge uc-data">XDM Schema</span>
+                  <span class="uc-badge uc-data">Streaming Seg.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
